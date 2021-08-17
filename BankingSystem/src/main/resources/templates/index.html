@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CASH Bank</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="height:auto;">
+
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+  <div style="text-color:yellow;font-size:40px">
+    THE C<span style="color:white; font-size:40px">ASH</span> BANK
+</div>
+  <ul class="navbar-nav">
+     <li class="nav-item">
+      <a class="nav-link" th:href= "@{/Feedback}">Feedback</a>
+    </li>
+      
+   </ul>
+</nav>
+
+<div class="container-fluid" style="margin-top:80px">
+ <div style="text-align:center; font-size:40px">
+    Welcome To The C<span style="color: red">ash </span> Bank<br>
+    <h1>The Sparks Foundation</h1>
+</div>
+  
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+ <div class="card-deck">
+    <div class="card bg-light" style="background-color: white">
+      <div class="card-body text-center">
+        <h3 class="card-text">View All Customers</h3>
+        
+        <br>
+        <br>
+       <a th:href = "@{/Customers}" class="btn btn-primary" role="button">View Customers</a>
+       <br>
+      </div>
+    </div>
+    <div class="card bg-light">
+      <div class="card-body text-center">
+        <h3 class="card-text">Add Customer</h3>
+        
+        <br>
+        <br>
+       
+       <a th:href = "@{/add}" class="btn btn-primary" role="button">Add Customer</a>
+       <br>
+      </div>
+    </div>
+    <div class="card bg-light">
+      <div class="card-body text-center">
+       <h3 class="card-text">View All Transactions</h3>
+        
+        <br>
+        <br>
+      
+       <a th:href = "@{/Transactions}" class="btn btn-primary" role="button">View Transactions</a>
+       <br>
+       <br>
+      </div>
+    </div>
+   <!--  <div class="card bg-light">
+      <div class="card-body text-center">
+        <h3 class="card-text">Remove Customer</h3>
+        
+        <br>
+        <br>
+       
+        <a th:href = "@{/Delete}" class="btn btn-danger" role="button">Remove Customer</a>
+        <br>
+       <br>
+      </div>
+    </div>  
+  </div> --> 
+  
+  <br>
+<br>
+<br>
+ <marquee>
+by Aaisha
+</marquee> 
+
+</body>
+</html>
+
+

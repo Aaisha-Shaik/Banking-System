@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer Updation</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	  <script>
+function myFunction() {
+  alert("Update Customer details ? ");
+}
+</script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+   <h1>AAISHA</h1>
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" th:href = "@{/}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" th:href = "@{/Feedback}">Feedback</a>
+    </li>
+  </ul>
+</nav>
+<br>
+	<div class="container" style="text-align: center;">
+		<div style="font-weight:bold; font-size:40px">
+    The C<span style="color:red;font-weight:bold">ash</span> Bank
+</div>
+		<hr>
+		<h2>Update Customer</h2><br>
+
+		<form th:action="@{/customersubmit}" method="POST" th:object="${customers}">
+			
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" style="margin-left:35%;" th:field="*{email}" />
+			
+			<input type="text" th:field="*{name}" style="margin-left:35%;"  class="form-control mb-4 col-4">
+				
+				
+			<input type="text" th:field="*{accountnumber}" style="margin-left:35%;" class="form-control mb-4 col-4">
+
+			<input type="number" th:field="*{balance}"  style="margin-left:35%;"  class="form-control mb-4 col-4">
+				
+		
+		
+		 <button type="submit" onclick="myFunction()" class="btn btn-info col-2"> Update Customer</button>
+		</form>
+		
+		<hr>
+		<br><br>
+ <a th:href="@{/showFormFortrans/{email}(email=${customers.email})}" class="btn btn-secondary">Transfer Money</a>
+ <br><br>
+		<a style="margin-left:40%;" th:href = "@{/}" class="btn btn-dark" role="button"> Back to Home</a>
+	</div>
+</body>
+</html>
